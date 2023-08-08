@@ -1,0 +1,62 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius : $radius;
+       -moz-border-raidus : $radius;
+        -ms-border-radius : $radius;
+            border-radius : $radius;
+}
+
+@mixin scroll() {
+    overflow-x : scroll;
+    overflow-y : hidden;
+    white-space: nowrap;
+    ms-overflow : none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin click() {
+    cursor : pointer;
+}
+
+@mixin inline() {
+    display : inline-block;
+}
+
+@mixin fixed($top, $bottom, $left, $right) {
+    position : fixed;
+    top     : $top;
+    bottom  : $bottom;
+    right   : $right;
+    left    : $left;
+}
+
+@mixin absolute($top, $bottom, $left, $right) {
+    position : absolute;
+    top     : $top;
+    bottom  : $bottom;
+    right   : $right;
+    left    : $left;
+}
+
+@mixin margin-x($size) {
+    margin-left  : $size;
+    margin-right : $size;
+}
+
+@mixin margin-y($size) {
+    margin-top    : $size;
+    margin-bottom : $size;
+}
+
+@mixin padding-x($size) {
+    padding-left  : $size;
+    padding-right : $size;
+}
+
+@mixin padding-y($size) {
+    padding-top    : $size;
+    padding-bottom : $size;
+}
+
