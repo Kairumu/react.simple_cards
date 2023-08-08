@@ -1,14 +1,10 @@
-import { useRef, useState, useEffect, } from 'react';
-import { useDispatch } from 'react-redux'
-
+import { useState, useEffect, } from 'react';
 import { _getRandomImg } from "./Utils/Unsplash";
-
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Card from "./Components/Card";
 
 const Home = (props) => {
 
-    const dispatch  = useDispatch();
     const params    = new URLSearchParams(window.location.search.slice(1));
 
     const [ cards, setCards ] = useState([]);
@@ -35,6 +31,7 @@ const Home = (props) => {
                     <div className="col-12 text-center">
                         <img 
                             style={{objectFit:"cover", height:"150px", width:"150px",}}
+                            alt="loading"
                             src="https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700"/>
                     </div>
                 }
